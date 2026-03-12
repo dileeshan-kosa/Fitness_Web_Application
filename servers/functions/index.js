@@ -37,4 +37,7 @@ app.use("/api/mealplans", mealPlanRouter);
 const exercisePlanRouter = require("./routes/exercisePlan");
 app.use("/api/exerciseplans", exercisePlanRouter);
 
+const combinedPlanRouter = require("./routes/combinedPlan");
+app.use("/api/combinedplans", combinedPlanRouter);
+
 exports.app = functions.https.onRequest(app);
