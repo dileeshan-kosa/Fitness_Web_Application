@@ -114,9 +114,3 @@ npm start
 * Implement full 30-day tracking for users to check off daily meals and workouts.
 * Add a profile dashboard to track and visualize weight loss or muscle gain progress over time.
 * Integrate an AI chatbot for real-time fitness query resolution.
-
-```
-
-This looks incredibly polished and will serve as a fantastic showcase piece on your GitHub for prospective internship opportunities or freelance clients. Let me know if you need help with any of those final minor bugs you mentioned!
-
-```
