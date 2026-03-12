@@ -146,7 +146,6 @@
 
 // export default ServicesList;
 
-
 import React from "react";
 import { Link } from "react-router-dom";
 import { mealPlan, Exercise, Combined, PlusIcon } from "../assets"; // Removed KosalaCom, assuming Combined is the correct image
@@ -155,31 +154,46 @@ function ServicesList() {
   const services = [
     { title: "Meal Planning Only", img: mealPlan, link: "meal-plan" },
     { title: "Exercise Only", img: Exercise, link: "exercise-only" },
-    { title: "The Combined Approach", img: Combined, link: "combined-approach", highlight: true }
+    {
+      title: "The Combined Approach",
+      img: Combined,
+      link: "combined-approach",
+      highlight: true,
+    },
   ];
 
   return (
     <div className="w-full bg-black py-24 px-10 md:px-20" id="service">
-      
       <div className="text-center mb-16">
-        <h2 className="text-4xl font-extrabold text-white mb-4">Choose Your Path</h2>
+        <h2 className="text-4xl font-extrabold text-white mb-4">
+          Choose Your Path
+        </h2>
         <div className="w-24 h-1 bg-orange-600 mx-auto"></div>
       </div>
 
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
         {services.map((service, index) => (
           <div key={index} className="flex flex-col items-center group">
-            <h3 className={`text-2xl font-bold mb-6 ${service.highlight ? 'text-white' : 'text-orange-500'}`}>
+            <h3 className="text-2xl font-bold mb-6 text-orange-500">
               {service.title}
             </h3>
-            
+
             {/* Image Card Container */}
-            <div className={`relative w-full aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl transition duration-500 group-hover:-translate-y-4 ${service.highlight ? 'border-4 border-orange-600 ring-4 ring-orange-600/20' : 'border border-white/10'}`}>
-              <img src={service.img} alt={service.title} className="w-full h-full object-cover transition duration-700 group-hover:scale-110 group-hover:opacity-50" />
-              
+            <div
+              className={`relative w-full aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl transition duration-500 group-hover:-translate-y-4 ${service.highlight ? "border-4 border-orange-600 ring-4 ring-orange-600/20" : "border border-white/10"}`}
+            >
+              <img
+                src={service.img}
+                alt={service.title}
+                className="w-full h-full object-cover transition duration-700 group-hover:scale-110 group-hover:opacity-50"
+              />
+
               {/* Hover Overlay with Plus Button */}
               <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                <Link to={`/${service.link}`} className="bg-orange-600 p-4 rounded-full transform scale-50 group-hover:scale-100 transition duration-500 shadow-lg shadow-orange-500/50 hover:bg-white">
+                <Link
+                  to={`/${service.link}`}
+                  className="bg-orange-600 p-4 rounded-full transform scale-50 group-hover:scale-100 transition duration-500 shadow-lg shadow-orange-500/50 hover:bg-white"
+                >
                   <img src={PlusIcon} alt="Go" className="w-8 h-8" />
                 </Link>
               </div>

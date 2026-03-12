@@ -179,6 +179,7 @@ import { MdLogout } from "react-icons/md";
 import { getAuth } from "firebase/auth";
 import { app } from "../config/firebase.config";
 import { setUserNull } from "../context/actions/userActions";
+import { HashLink } from "react-router-hash-link";
 
 const Header = () => {
   const user = useSelector((state) => state.user);
